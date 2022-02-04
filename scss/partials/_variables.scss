@@ -1,0 +1,13 @@
+$colours: (
+  header: #003b6d,
+  footer: #676767,
+  light-gray: #bdbdbd,
+  light-blue: #6699cc,
+  body: #ffffff,
+);
+
+$primary-font: "open sans", sans-serif;
+
+@function getColours($colour) {
+  @return map-get($colours, $colour);
+}

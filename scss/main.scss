@@ -1,0 +1,7 @@
+@import "partials/header";
+@import "partials/variables";
+@import "partials/body";
+
+footer {
+  background-color: getColours(footer);
+}

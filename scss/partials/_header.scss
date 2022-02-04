@@ -1,0 +1,26 @@
+@import "variables";
+
+.h1_container,
+h2,
+h3 {
+  text-align: center;
+}
+
+header {
+  background-color: getColours(header);
+}
+
+#navbarNav > ul > li > a {
+  color: getColours(body);
+  font-size: 1.5em;
+}
+
+.navbar-toggler-icon {
+  color: black;
+}
+
+.shoppingbasket_container {
+  text-align: right;
+  padding: 10px;
+  font-weight: 1em;
+}

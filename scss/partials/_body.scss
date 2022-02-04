@@ -1,0 +1,38 @@
+@import "variables";
+
+body {
+  font-family: $primary-font;
+}
+
+.products_container img,
+.test_container img {
+  height: 300px;
+  width: 100%;
+}
+
+form {
+  text-align: center;
+  margin-top: 50px;
+  padding: 15px;
+}
+
+#textinput {
+  width: 70%;
+  border-radius: 15px;
+  text-align: center;
+}
+
+body > main > form > div > i {
+  position: relative;
+  margin-left: -28px;
+}
+
+.container a {
+  text-decoration: none;
+  color: black;
+}
+
+.specificproduct_container img {
+  height: 400px;
+  width: auto;
+}
