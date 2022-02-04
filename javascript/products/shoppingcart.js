@@ -27,7 +27,6 @@ function updateContent() {
   }
 }
 updateContent();
-
 const removeproduct_btn = document.querySelectorAll(".test_container button");
 
 removeproduct_btn.forEach(function (removeItem) {
@@ -41,6 +40,7 @@ function removeProduct() {
   let storageProduct = retriveFromStorage();
   console.log(retriveFromStorage);
   console.log("test");
+  //Denne endrer ingenting basicly
   storageProduct = storageProduct.filter((remove) => {
     if (id !== remove.id) {
       return true;
@@ -48,7 +48,7 @@ function removeProduct() {
   });
   updateContent();
 
-  // Fjerner fra storage: //const storageProduct = retriveFromStorage();
+  // Fjerner fra storage men updater ikke HTML: //const storageProduct = retriveFromStorage();
   //const removeItem = storageProduct.filter((item) => item.id !== id);
   //saveList(removeItem);
 }
