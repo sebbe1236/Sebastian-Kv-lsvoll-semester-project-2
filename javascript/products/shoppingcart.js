@@ -37,24 +37,23 @@ function removeProduct() {
   console.log("test reemove btn");
   const id = this.dataset.id;
 
-  let storageProduct = retriveFromStorage();
+  //let storageProduct = retriveFromStorage();
 
   console.log("test");
-  //Denne fjerner bare et item fra storage utem refresh og bare i console.log. Målet er at ny HTML skal produseres når et item blir fjerna fra storage.
+  //Denne fjerner bare et item fra storage og man må refreshe siden hver gang for å se det fjernet. Målet er at HTML skal fjernes skal når et item blir fjerna fra storage uten refresh.
   const updatedStorage = storageProduct.filter((remove) => {
     if (id !== remove.id) {
       return true;
     }
   });
   saveList(updatedStorage);
-  ///storageProduct = updatedStorage;
+  //storageProduct = updatedStorage;
   console.log(updatedStorage);
   updateContent();
-
-  // Fjerner item for item fra storage, men endrer ikke HTML.
-  //const storageProduct = retriveFromStorage();
-  //const removeItem = storageProduct.filter((item) => item.id !== id);
-  //saveList(removeItem);
+  //Fjerner item for item fra storage, men endrer ikke HTML.
+  // const storageProduct = retriveFromStorage();
+  // const removeItem = storageProduct.filter((item) => item.id !== id);
+  // saveList(removeItem);
 }
 
 //
