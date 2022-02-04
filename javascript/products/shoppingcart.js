@@ -40,14 +40,14 @@ function removeProduct() {
   let storageProduct = retriveFromStorage();
 
   console.log("test");
-  //Denne fjerner bare et item fra storage og bare i console.log. Målet er at ny HTML skal produseres når et item blir fjerna fra storage.
+  //Denne fjerner bare et item fra storage utem refresh og bare i console.log. Målet er at ny HTML skal produseres når et item blir fjerna fra storage.
   const updatedStorage = storageProduct.filter((remove) => {
     if (id !== remove.id) {
       return true;
     }
   });
   saveList(updatedStorage);
-  storageProduct = updatedStorage;
+  ///storageProduct = updatedStorage;
   console.log(updatedStorage);
   updateContent();
 
