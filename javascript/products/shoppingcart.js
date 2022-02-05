@@ -11,7 +11,6 @@ if (storageProduct.length === 0) {
 
 function updateContent() {
   try {
-    basketContainer.innerHTML = "";
     storageProduct.forEach((product) => {
       basketContainer.innerHTML += `<div class="col-lg-3 col-md-2">
                 <h3>${product.title}</h3>
@@ -47,6 +46,7 @@ function removeProduct() {
     }
   });
   saveList(updatedStorage);
+  window.location.reload();
   //storageProduct = updatedStorage;
   console.log(updatedStorage);
   updateContent();
