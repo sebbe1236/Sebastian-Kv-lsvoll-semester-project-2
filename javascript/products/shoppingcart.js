@@ -1,52 +1,84 @@
 import { retriveFromStorage } from "../storage/storage.js";
 import { saveList } from "../storage/storage.js";
 import { listKey } from "../storage/storage.js";
+
 const basketContainer = document.querySelector(".row");
+
+const totalbasketPrice = document.querySelector("#totalprice");
 console.log(basketContainer);
-const storageProduct = retriveFromStorage();
-console.log(storageProduct);
-if (storageProduct.length === 0) {
-  basketContainer.innerHTML += `<h2>Cart is empty</h2>`;
-}
+
+// const storageProduct = retriveFromStorage();
+
+// //If statement viser empty message hvis den er utenfor med window.load på, hvis den er inni vises ikke meldinga.
+// const storageProduct = retriveFromStorage();
+
+// if (storageProduct.length === 0) {
+//   basketContainer.innerHTML = `<h2>Cart is empty</h2>`;
+// }
+
+updateContent();
 
 function updateContent() {
   try {
-    storageProduct.forEach((product) => {
-      basketContainer.innerHTML += `<div class="col-lg-3 col-md-2">
-                <h3>${product.title}</h3>
-                <img class="img-fluid" src="http://localhost:1337${product.img}" alt="Sneaker product image" />
-                    <h5>Price:${product.price}$</h5>
-                    <button data-id="${product.id}" class="removeproduct_btn"  >Remove from basket</button>
-                </div>
-                
-                `;
+    const storageProduct = retriveFromStorage();
+    console.log(storageProduct);
+    if (storageProduct.length === 0) {
+      basketContainer.innerHTML = `<h2>Cart is empty</h2>`;
+    } else {
+      basketContainer.innerHTML = "";
+      storageProduct.forEach((product) => {
+        basketContainer.innerHTML += `<div class="col-lg-3 col-md-2">
+                  <h3>${product.title}</h3>
+                  <img class="img-fluid" src="http://localhost:1337${product.img}" alt="Sneaker product image" />
+                      <h5>Price:${product.price}$</h5>
+                      <button data-id="${product.id}" class="removeproduct_btn">Remove from basket</button>
+                  </div>
+                  
+                  `;
+      });
+    }
+    const removeproduct_btn = document.querySelectorAll(".test_container button");
+    console.log(removeproduct_btn);
+
+    removeproduct_btn.forEach(function (removeItem) {
+      removeItem.addEventListener("click", removeProduct);
     });
+    //Annen måte å få lagt til oppdatert pris på:
+    // let totalPrice = 0;
+    // storageProduct.forEach(function (updateTotal) {
+    //   totalPrice += parseInt(updateTotal.price);
+    // });
+
+    // totalbasketPrice.innerHTML = `${totalPrice}`;
+    //PreviousValue er tallet man har, currentValue er det som plusses på.
+    //currentValue er den nye verdien som legges til hvis man legger til et nytt item og plusses på previousvallet.
+    const updatePrice = (previousValue, currentValue) => previousValue + currentValue;
+    const priceFilter = storageProduct.map((item) => parseFloat(item.price));
+
+    totalbasketPrice.innerHTML = priceFilter.reduce(updatePrice);
   } catch (error) {
     console.log(error.message, "Testing update content");
   }
 }
-updateContent();
-const removeproduct_btn = document.querySelectorAll(".test_container button");
-
-removeproduct_btn.forEach(function (removeItem) {
-  removeItem.addEventListener("click", removeProduct);
-});
 
 function removeProduct() {
   console.log("test reemove btn");
   const id = this.dataset.id;
 
-  //let storageProduct = retriveFromStorage();
+  const storageProduct = retriveFromStorage();
 
   console.log("test");
-  //Denne fjerner bare et item fra storage og man må refreshe siden hver gang for å se det fjernet. Målet er at HTML skal fjernes skal når et item blir fjerna fra storage uten refresh.
+  //const storageProduct = retriveFromStorage();
+  //Uten windows.onload vil den fjerne bare 1 item fra HTML, Med window.location.reload() så fjernes alle en etter 1.
+  //Empty meldingen vil ikke vises.
   const updatedStorage = storageProduct.filter((remove) => {
     if (id !== remove.id) {
       return true;
     }
   });
   saveList(updatedStorage);
-  window.location.reload();
+  // window.location.reload();
+
   //storageProduct = updatedStorage;
   console.log(updatedStorage);
   updateContent();
