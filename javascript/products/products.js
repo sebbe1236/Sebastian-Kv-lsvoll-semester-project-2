@@ -22,10 +22,10 @@ function renderProducts(json) {
     json.forEach((products) => {
       productsContainer.innerHTML += `
       
-        <div class="col-lg-3 col-md-2 p-3 text-center">
+        <div class="col-lg-3 col-md-2 p-5 text-center">
         <a a href="singelproduct.html?id=${products.id}">
         <h3>${products.title}</h3> 
-        <img class="img-fluid" src="http://localhost:1337${products.image.url}" alt="Sneaker product image" />
+        <img class="img-fluid rounded-3" src="http://localhost:1337${products.image.url}" alt="Sneaker product image" />
         <h5>Price:${products.price}$</h5> </a>
         </div>
         

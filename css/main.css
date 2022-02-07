@@ -25,6 +25,7 @@ header {
 
 body {
   font-family: "open sans", sans-serif;
+  height: 100vh;
 }
 
 .products_container img,
@@ -58,6 +59,16 @@ body > main > form > div > i {
 .specificproduct_container img {
   height: 400px;
   width: auto;
+}
+
+body > header > div > a {
+  color: #ffffff;
+}
+
+.removeproduct_btn {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #059142;
 }
 
 footer {

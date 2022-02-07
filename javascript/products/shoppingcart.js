@@ -27,9 +27,9 @@ function updateContent() {
     } else {
       basketContainer.innerHTML = "";
       storageProduct.forEach((product) => {
-        basketContainer.innerHTML += `<div class="col-lg-3 col-md-2">
+        basketContainer.innerHTML += `<div class="col-lg-3 col-md-2 mp-3 p-4 ">
                   <h3>${product.title}</h3>
-                  <img class="img-fluid" src="http://localhost:1337${product.img}" alt="Sneaker product image" />
+                  <img class="img-fluid rounded-3" src="http://localhost:1337${product.img}" alt="Sneaker product image" />
                       <h5>Price:${product.price}$</h5>
                       <button data-id="${product.id}" class="removeproduct_btn">Remove from basket</button>
                   </div>

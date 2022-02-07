@@ -13,7 +13,7 @@ export async function featuredProducts() {
       <div class="col-lg-4 col-md-3 p-3 text-center">
       <a href="singelproduct.html?id=${featured.id}">
       <h3>${featured.title}</h3>
-      <img class="img-fluid" src="http://localhost:1337${featured.image.url}" alt="featured product image" /></a>
+      <img class="img-fluid rounded-3" src="http://localhost:1337${featured.image.url}" alt="featured product image" /></a>
       </div>
       `;
     });

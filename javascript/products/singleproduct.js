@@ -26,7 +26,7 @@ async function singleProduct() {
     }
 
     singleproductContainer.innerHTML += `<div class="col text-center"><h2>${json.title}</h2>
-    <img class="img-fluid" src="http://localhost:1337${json.image.url}" alt="Sneaker product image" />
+    <img class="img-fluid rounded-3" src="http://localhost:1337${json.image.url}" alt="Sneaker product image" />
     <div><p>${json.description}</p>
     <h5>Price:${json.price}</h5>
     </div>
