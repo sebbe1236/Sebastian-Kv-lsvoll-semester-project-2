@@ -19,8 +19,6 @@ header {
   color: black;
 }
 
-.shoppingbasket_container {
-  text-align: right;
-  padding: 10px;
-  font-weight: 1em;
+body > header > div > a {
+  color: getColours(body);
 }

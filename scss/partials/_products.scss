@@ -1,0 +1,36 @@
+@import "variables";
+
+.container a,
+.editproducts_container a {
+  text-decoration: none;
+  color: black;
+}
+
+#textinput {
+  width: 70%;
+  border-radius: 15px;
+  text-align: center;
+}
+
+form {
+  text-align: center;
+  margin-top: 50px;
+  padding: 15px;
+}
+
+.products_container img,
+.test_container img,
+.editproducts_container img {
+  height: 300px;
+  width: 100%;
+}
+
+body > main > form > div > i {
+  position: relative;
+  margin-left: -28px;
+}
+
+.specificproduct_container img {
+  height: 400px;
+  width: auto;
+}

@@ -1,8 +1,11 @@
 import { baseUrl } from "../urls/url.js";
 import { retriveFromStorage } from "../storage/storage.js";
 import { saveList } from "../storage/storage.js";
-
 import { listKey } from "../storage/storage.js";
+
+import { loginMenu } from "../adminlogin/loginMenu.js";
+loginMenu();
+
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");

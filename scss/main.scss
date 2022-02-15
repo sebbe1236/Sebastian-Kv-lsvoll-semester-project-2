@@ -1,7 +1,9 @@
 @import "partials/header";
 @import "partials/variables";
 @import "partials/body";
-
-footer {
-  background-color: getColours(footer);
-}
+@import "partials/loginform";
+@import "partials/footer";
+@import "partials/products";
+@import "partials/basket";
+@import "partials/updateproductforms";
+@import "partials/media";

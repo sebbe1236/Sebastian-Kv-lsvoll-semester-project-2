@@ -1,0 +1,46 @@
+@import "variables";
+
+.login_container {
+  background-color: getColours(light-gray);
+  padding: 50px;
+
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_container label {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
+}
+
+.login_container input {
+  height: 20px;
+  width: 200px;
+}
+
+.login_container button {
+  background-color: getColours(green-btn);
+  padding: 10px;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+
+#logout {
+  background-color: getColours(green-btn);
+  color: getColours(pure-white);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.formedit_container label {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-weight: bold;
+}

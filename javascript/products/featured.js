@@ -1,5 +1,6 @@
 import { baseUrl } from "../urls/url.js";
-
+import { loginMenu } from "../adminlogin/loginMenu.js";
+loginMenu();
 const featuredUrl = baseUrl + "products?featured_eq=true";
 const featuredProduct = document.querySelector(".row");
 

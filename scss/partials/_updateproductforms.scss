@@ -1,0 +1,26 @@
+@import "variables";
+
+.updateproducts_container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 15px;
+}
+
+.updateproducts_container label {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.updateproducts_container form {
+  background-color: getColours(light-gray);
+  padding: 10px;
+  border-radius: 20px;
+  width: 300px;
+}
+textarea {
+  height: 200px;
+}

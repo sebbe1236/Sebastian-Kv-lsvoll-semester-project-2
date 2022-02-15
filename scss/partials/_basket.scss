@@ -1,0 +1,12 @@
+@import "variables";
+
+.test_container img {
+  height: 300px;
+  width: 100%;
+}
+
+.removeproduct_btn {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: getColours(green-btn);
+}
