@@ -29,7 +29,8 @@ async function individualProduct() {
     productName.value = json.title;
     productPrice.value = json.price;
     productDes.value = json.description;
-    productImage.value = json.url;
+    productImage.value = json.image.url;
+    console.log(productImage);
   } catch (error) {
     console.log(error.message);
   }

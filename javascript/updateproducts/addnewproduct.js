@@ -28,7 +28,7 @@ function addproductForm(event) {
   const textareaValue = textarea.value.trim();
   const priceValue = parseFloat(price.value);
   const imageValue = image.value.trim();
-
+  //const imageValue = image.value.image;
   if (
     titleValue.length === 0 ||
     textareaValue.length === 0 ||
