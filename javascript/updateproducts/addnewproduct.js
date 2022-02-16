@@ -28,7 +28,7 @@ function addproductForm(event) {
   const textareaValue = textarea.value.trim();
   const priceValue = parseFloat(price.value);
   const imageValue = image.value.trim();
-  //const imageValue = image.value.image;
+  //const imageValue = image.value.url;
   if (
     titleValue.length === 0 ||
     textareaValue.length === 0 ||
@@ -45,7 +45,7 @@ async function addProduct(title, description, price, image) {
   const url = baseUrl + "products";
   console.log(url);
   const data = JSON.stringify({ title: title, description: description, price: price, image: image });
-
+  console.log(data);
   const dataOptions = {
     method: "POST",
     body: data,
