@@ -2,4 +2,12 @@
   footer {
     position: relative !important;
   }
+  nav a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .specificproduct_container img {
+    width: 80%;
+  }
 }

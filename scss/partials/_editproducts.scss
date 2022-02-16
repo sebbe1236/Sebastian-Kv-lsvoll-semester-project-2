@@ -1,0 +1,12 @@
+@import "variables";
+
+.editproducts_container button {
+  border-radius: $border-radius;
+  background-color: getColours(light-gray);
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  &:hover {
+    background-color: getColours(green-btn);
+  }
+}

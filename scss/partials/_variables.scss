@@ -7,10 +7,17 @@ $colours: (
   background-content: #ececec,
   pure-white: #ffffff,
   green-btn: #059142,
+  red-btn: #880808,
 );
-
-$primary-font: "open sans", sans-serif;
 
 @function getColours($colour) {
   @return map-get($colours, $colour);
 }
+
+$primary-font: "open sans", sans-serif;
+$header-font: "montserrat", sans-serif;
+
+$border-radius: 10px;
+
+$padding: 10px;
+$menu-linkcolor: #bdbdbd;

@@ -1,6 +1,6 @@
 @import "variables";
 
-.updateproducts_container form {
+.addproducts_container form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,13 +9,13 @@
   padding: 15px;
 }
 
-.updateproducts_container label {
+.addproducts_container label {
   text-align: center;
   font-weight: bold;
   padding: 10px;
 }
 
-.updateproducts_container form {
+.addproducts_container form {
   background-color: getColours(light-gray);
   padding: 10px;
   border-radius: 20px;

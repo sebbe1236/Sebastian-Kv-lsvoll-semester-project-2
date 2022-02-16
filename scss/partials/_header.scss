@@ -2,14 +2,16 @@
 
 .h1_container,
 h2,
-h3 {
+h3,
+h1 {
   text-align: center;
+  font-family: $header-font;
+  font-weight: bold;
 }
 
 header {
   background-color: getColours(header);
 }
-
 #navbarNav > ul > li > a {
   color: getColours(body);
   font-size: 1.5em;
@@ -19,6 +21,44 @@ header {
   color: black;
 }
 
+nav {
+  a {
+    color: getColours(body);
+    font-size: 1.5em;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  a.active {
+    font-weight: bold;
+  }
+}
+
+.menu {
+  padding: 10px;
+}
+
+.menu a {
+  background-color: $menu-linkcolor;
+  border-radius: $border-radius;
+  padding: 5px;
+  color: getColours(pure-white);
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    background-color: getColours(green-btn);
+  }
+}
+
+#logout {
+  background-color: getColours(red-btn);
+  border-radius: $border-radius;
+  color: getColours(pure-white);
+  padding: 5px;
+  font-weight: bold;
+}
+
 body > header > div > a {
-  color: getColours(body);
+  color: getColours(pure-white);
 }

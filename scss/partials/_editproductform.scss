@@ -1,0 +1,17 @@
+@import "variables";
+
+.deleteproduct_button {
+  background-color: getColours(red-btn);
+  color: white;
+  font-weight: bold;
+  padding: $padding;
+  border-radius: $border-radius;
+}
+
+.edit_button {
+  border-radius: $border-radius;
+  padding: $padding;
+  background-color: getColours(green-btn);
+  color: white;
+  font-weight: bold;
+}
