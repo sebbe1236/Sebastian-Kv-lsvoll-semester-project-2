@@ -8,6 +8,7 @@ $colours: (
   pure-white: #ffffff,
   green-btn: #059142,
   red-btn: #880808,
+  yellow-btn: #ffba01,
 );
 
 @function getColours($colour) {
@@ -20,4 +21,5 @@ $header-font: "montserrat", sans-serif;
 $border-radius: 10px;
 
 $padding: 10px;
-$menu-linkcolor: #bdbdbd;
+
+$breakpoint-mobile: 600px;

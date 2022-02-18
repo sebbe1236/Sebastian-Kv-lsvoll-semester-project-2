@@ -18,6 +18,7 @@ header {
 
 .navbar-toggler-icon {
   color: black;
+  background-color: white;
 }
 
 nav a {
@@ -38,10 +39,10 @@ nav a.active {
 }
 
 .menu a {
-  background-color: #bdbdbd;
+  background-color: #ffba01;
   border-radius: 10px;
   padding: 5px;
-  color: #ffffff;
+  color: black;
   font-weight: bold;
   text-decoration: none;
 }
@@ -215,6 +216,9 @@ body > main > form > div > i {
   text-align: center;
   font-weight: bold;
   padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .addproducts_container form {
@@ -226,6 +230,16 @@ body > main > form > div > i {
 
 textarea {
   height: 200px;
+}
+
+.addproduct_button {
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.addproduct_button:hover {
+  background-color: #059142;
 }
 
 @media (max-width: 1000px) {
@@ -244,6 +258,19 @@ textarea {
   }
   .specificproduct_container img {
     width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
   }
 }
 

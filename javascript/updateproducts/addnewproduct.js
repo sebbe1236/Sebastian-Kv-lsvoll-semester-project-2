@@ -27,8 +27,10 @@ function addproductForm(event) {
   const titleValue = title.value.trim();
   const textareaValue = textarea.value.trim();
   const priceValue = parseFloat(price.value);
-  const imageValue = image.value.trim();
-  //const imageValue = image.value.url;
+  const imageValue = image.id;
+
+  //const imageValue = image.value.trim();
+
   if (
     titleValue.length === 0 ||
     textareaValue.length === 0 ||
@@ -38,14 +40,15 @@ function addproductForm(event) {
   ) {
     return displayMessage("error", "Please supply a valid inputs", ".form_message");
   }
+  console.log(imageValue);
   addProduct(titleValue, textareaValue, priceValue, imageValue);
 }
 
 async function addProduct(title, description, price, image) {
   const url = baseUrl + "products";
-  console.log(url);
+
   const data = JSON.stringify({ title: title, description: description, price: price, image: image });
-  console.log(data);
+
   const dataOptions = {
     method: "POST",
     body: data,

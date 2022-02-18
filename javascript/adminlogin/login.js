@@ -51,7 +51,7 @@ async function logIn(username, password) {
       savingToken(json.jwt);
       saveUsers(json.user);
 
-      //location.href = "/";
+      location.href = "/";
     }
 
     if (json.error) {

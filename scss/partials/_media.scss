@@ -1,3 +1,4 @@
+@import "variables";
 @media (max-width: 1000px) {
   footer {
     position: relative !important;
@@ -9,5 +10,13 @@
   }
   .specificproduct_container img {
     width: 80%;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 }

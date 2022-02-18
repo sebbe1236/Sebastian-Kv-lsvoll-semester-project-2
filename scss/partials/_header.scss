@@ -19,6 +19,7 @@ header {
 
 .navbar-toggler-icon {
   color: black;
+  background-color: white;
 }
 
 nav {
@@ -39,10 +40,10 @@ nav {
 }
 
 .menu a {
-  background-color: $menu-linkcolor;
+  background-color: getColours(yellow-btn);
   border-radius: $border-radius;
   padding: 5px;
-  color: getColours(pure-white);
+  color: black;
   font-weight: bold;
   text-decoration: none;
 
