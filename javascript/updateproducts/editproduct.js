@@ -32,6 +32,7 @@ async function individualProduct() {
     productDes.value = json.description;
     productImage.value = json.image.url;
     inputId.value = json.id;
+    console.log(inputId);
 
     deleteProduct(json.id);
 

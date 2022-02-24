@@ -1,0 +1,9 @@
+@import "variables";
+
+.herobanner_container {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+/* for å endre bilde til at alt vises på alle lengder bytt height til auto;*/

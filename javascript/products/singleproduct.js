@@ -28,7 +28,7 @@ async function singleProduct() {
       cssIconstyle = "fa-cart-plus";
     }
 
-    singleproductContainer.innerHTML += `<div class="col text-center"><h2>${json.title}</h2>
+    singleproductContainer.innerHTML += `<div class="col text-center m-3"><h2>${json.title}</h2>
     <img class="img-fluid rounded-3" src="http://localhost:1337${json.image.url}" alt="Sneaker product image" />
     <div><p>${json.description}</p>
     <h5>Price:${json.price}</h5>

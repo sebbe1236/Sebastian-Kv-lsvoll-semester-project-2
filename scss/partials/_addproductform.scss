@@ -21,6 +21,7 @@
   padding: 10px;
   border-radius: 20px;
   width: 300px;
+  border-style: solid;
 }
 textarea {
   height: 200px;
@@ -33,4 +34,22 @@ textarea {
   &:hover {
     background-color: getColours(green-btn);
   }
+}
+
+.success_message {
+  padding: $padding;
+  border-radius: $border-radius;
+  background-color: getColours(green-btn);
+}
+
+.error_message {
+  padding: $padding;
+  text-align: center;
+  border-radius: $border-radius;
+  background-color: getColours(red-btn);
+  color: white;
+}
+
+.form_message {
+  padding: $padding;
 }

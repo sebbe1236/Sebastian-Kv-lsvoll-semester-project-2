@@ -17,9 +17,9 @@ console.log(basketContainer);
 //   basketContainer.innerHTML = `<h2>Cart is empty</h2>`;
 // }
 
-updateContent();
+basketContent();
 
-function updateContent() {
+function basketContent() {
   try {
     const storageProduct = retriveFromStorage();
     console.log(storageProduct);
@@ -28,7 +28,7 @@ function updateContent() {
     } else {
       basketContainer.innerHTML = "";
       storageProduct.forEach((product) => {
-        basketContainer.innerHTML += `<div class="col-lg-3 col-md-2 mp-3 p-4 ">
+        basketContainer.innerHTML += `<div class="col-lg-3 col-md-4 mp-3 p-4 ">
                   <h3>${product.title}</h3>
                   <img class="img-fluid rounded-3" src="http://localhost:1337${product.img}" alt="Sneaker product image" />
                       <h5>Price:${product.price}$</h5>
@@ -69,24 +69,14 @@ function removeProduct() {
   const storageProduct = retriveFromStorage();
 
   console.log("test");
-  //const storageProduct = retriveFromStorage();
-  //Uten windows.onload vil den fjerne bare 1 item fra HTML, Med window.location.reload() så fjernes alle en etter 1.
-  //Empty meldingen vil ikke vises.
+
   const updatedStorage = storageProduct.filter((remove) => {
     if (id !== remove.id) {
       return true;
     }
   });
   saveList(updatedStorage);
-  // window.location.reload();
 
-  //storageProduct = updatedStorage;
   console.log(updatedStorage);
-  updateContent();
-  //Fjerner item for item fra storage, men endrer ikke HTML.
-  // const storageProduct = retriveFromStorage();
-  // const removeItem = storageProduct.filter((item) => item.id !== id);
-  // saveList(removeItem);
+  basketContent();
 }
-
-//

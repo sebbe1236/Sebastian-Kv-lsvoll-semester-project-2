@@ -12,7 +12,9 @@ async function bannerimgCall() {
     const response = await fetch(bannerUrl);
     const json = await response.json();
     console.log(json);
-    Container.innerHTML += `<img class="img-fluid" src="http://localhost:1337${json.hero_banner.url}" alt="Hero image" />`;
+    Container.innerHTML += `
+    <div> 
+    <img class="herobanner_container" src="http://localhost:1337${json.hero_banner.formats.small.url}" alt="Hero image" /></div>`;
   } catch (error) {
     console.log(error.message, "Testing");
   }

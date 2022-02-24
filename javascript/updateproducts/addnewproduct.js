@@ -2,7 +2,7 @@ import { loginMenu } from "../adminlogin/loginMenu.js";
 import { baseUrl } from "../urls/url.js";
 import { fetchToken } from "../storage/storage.js";
 import { displayMessage } from "../message/displayMessage.js";
-
+//Potensiell løsning på url problemet:https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseURL
 const token = fetchToken();
 
 if (!token) {
@@ -27,9 +27,9 @@ function addproductForm(event) {
   const titleValue = title.value.trim();
   const textareaValue = textarea.value.trim();
   const priceValue = parseFloat(price.value);
-  const imageValue = image.id;
+  //const imageValue = image.id;
 
-  //const imageValue = image.value.trim();
+  const imageValue = image.value.trim();
 
   if (
     titleValue.length === 0 ||
@@ -37,8 +37,9 @@ function addproductForm(event) {
     priceValue.length === 0 ||
     isNaN(priceValue) ||
     imageValue.length === 0
+    //FormData.has(imageValue)
   ) {
-    return displayMessage("error", "Please supply a valid inputs", ".form_message");
+    return displayMessage("error_message", "Please supply a valid inputs", ".form_message");
   }
   console.log(imageValue);
   addProduct(titleValue, textareaValue, priceValue, imageValue);
@@ -64,7 +65,7 @@ async function addProduct(title, description, price, image) {
     const json = await response.json();
     console.log(json);
     if (json.created_at) {
-      displayMessage("success", "Product succesfully added", ".form_message");
+      displayMessage("success_message", "Product succesfully added", ".form_message");
       form.reset();
     }
   } catch (error) {

@@ -52,6 +52,14 @@ nav {
   }
 }
 
+.fas {
+  &:hover {
+    background-color: getColours(body);
+    transition: 0.5s ease-in;
+    border-radius: 10px;
+  }
+}
+
 #logout {
   background-color: getColours(red-btn);
   border-radius: $border-radius;

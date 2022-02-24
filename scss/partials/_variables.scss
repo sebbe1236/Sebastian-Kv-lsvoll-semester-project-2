@@ -1,7 +1,7 @@
 $colours: (
-  header: #003b6d,
+  header: #0077b6,
   footer: #676767,
-  light-gray: #bdbdbd,
+  light-gray: #ccbfbf,
   light-blue: #6699cc,
   body: #ffffff,
   background-content: #ececec,
@@ -23,3 +23,9 @@ $border-radius: 10px;
 $padding: 10px;
 
 $breakpoint-mobile: 600px;
+
+@mixin searchinput {
+  #textinput {
+    transform: scale(1.2);
+  }
+}
