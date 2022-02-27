@@ -28,12 +28,12 @@ async function singleProduct() {
       cssIconstyle = "fa-cart-plus";
     }
 
-    singleproductContainer.innerHTML += `<div class="col text-center m-3"><h2>${json.title}</h2>
+    singleproductContainer.innerHTML += `<div class="col text-center m-3 p-3"><h2>${json.title}</h2>
     <img class="img-fluid rounded-3" src="http://localhost:1337${json.image.url}" alt="Sneaker product image" />
-    <div><p>${json.description}</p>
-    <h5>Price:${json.price}</h5>
+    <div class="p-3"><p>${json.description}</p>
+    <h5 class="p-3">Price:${json.price}$</h5>
     </div>
-    <i class="${cssIconstyle} fa" data-id="${json.id}" data-title="${json.title}" data-img="${json.image.url}" data-price="${json.price}"">Add to cart</i>
+    <i class="${cssIconstyle} fa" data-id="${json.id}" data-title="${json.title}" data-img="${json.image.url}" data-price="${json.price}" >Add to cart</i>
     </div>`;
   } catch (error) {
     console.log(error.message, "query fetch");

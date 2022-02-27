@@ -27,11 +27,10 @@ nav {
     color: getColours(body);
     font-size: 1.5em;
   }
-  a:hover {
-    text-decoration: underline;
-  }
+
   a.active {
     font-weight: bold;
+    text-decoration: underline;
   }
 }
 

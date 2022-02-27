@@ -5,7 +5,7 @@ export function logoutButton() {
   const button = document.querySelector("#logout");
   if (button) {
     button.onclick = function () {
-      const doLogout = confirm("do you want to log out");
+      const doLogout = confirm("do you want to log out?");
 
       if (doLogout) {
         clearUserkey();

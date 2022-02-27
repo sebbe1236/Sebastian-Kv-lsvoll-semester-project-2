@@ -47,7 +47,7 @@ function addproductForm(event) {
 
 async function addProduct(title, description, price, image) {
   const url = baseUrl + "products";
-
+  //Hvis man endrer til image_url som property så vises bildet/lenken i strapi men ikke på det produktet som er lagt til  på siden.
   const data = JSON.stringify({ title: title, description: description, price: price, image: image });
 
   const dataOptions = {

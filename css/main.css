@@ -27,12 +27,9 @@ nav a {
   font-size: 1.5em;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
 nav a.active {
   font-weight: bold;
+  text-decoration: underline;
 }
 
 .menu {
@@ -164,10 +161,10 @@ footer {
 }
 
 #textinput:hover {
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
   background-color: lightblue;
   padding: 10px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 form {

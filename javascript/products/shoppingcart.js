@@ -8,15 +8,6 @@ const basketContainer = document.querySelector(".row");
 const totalbasketPrice = document.querySelector("#totalprice");
 console.log(basketContainer);
 
-// const storageProduct = retriveFromStorage();
-
-// //If statement viser empty message hvis den er utenfor med window.load på, hvis den er inni vises ikke meldinga.
-// const storageProduct = retriveFromStorage();
-
-// if (storageProduct.length === 0) {
-//   basketContainer.innerHTML = `<h2>Cart is empty</h2>`;
-// }
-
 basketContent();
 
 function basketContent() {

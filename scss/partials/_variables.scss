@@ -23,9 +23,3 @@ $border-radius: 10px;
 $padding: 10px;
 
 $breakpoint-mobile: 600px;
-
-@mixin searchinput {
-  #textinput {
-    transform: scale(1.2);
-  }
-}
