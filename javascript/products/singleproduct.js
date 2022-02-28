@@ -27,13 +27,21 @@ async function singleProduct() {
     if (iconChecked) {
       cssIconstyle = "fa-cart-plus";
     }
+    let image = "";
+
+    if (json.image !== null) {
+      image = `<img class="img-fluid rounded-3" src="http://localhost:1337${json.image.url}" alt="Sneaker product image" />`;
+    } else if (json.image_url !== null) {
+      image = `<img class="img-fluid rounded-3" src="${json.image_url}" alt="Sneaker product image" />`;
+    }
 
     singleproductContainer.innerHTML += `<div class="col text-center m-3 p-3"><h2>${json.title}</h2>
-    <img class="img-fluid rounded-3" src="http://localhost:1337${json.image.url}" alt="Sneaker product image" />
+    ${image}
     <div class="p-3"><p>${json.description}</p>
     <h5 class="p-3">Price:${json.price}$</h5>
+    
     </div>
-    <i class="${cssIconstyle} fa" data-id="${json.id}" data-title="${json.title}" data-img="${json.image.url}" data-price="${json.price}" >Add to cart</i>
+    <i class="${cssIconstyle} fa" data-id="${json.id}" data-title="${json.title}" data-img="${json.image}" data-price="${json.price}" >Add to cart</i>
     </div>`;
   } catch (error) {
     console.log(error.message, "query fetch");
@@ -49,8 +57,9 @@ function addproductBasket() {
   this.classList.toggle("fa-shopping-cart");
   this.classList.toggle("fa-cart-plus");
   const id = this.dataset.id;
-  const image = this.dataset.img;
 
+  const image = this.dataset.img;
+  console.log(image);
   const price = this.dataset.price;
 
   const title = this.dataset.title;

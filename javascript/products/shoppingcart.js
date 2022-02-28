@@ -19,9 +19,17 @@ function basketContent() {
     } else {
       basketContainer.innerHTML = "";
       storageProduct.forEach((product) => {
+        // let image = "";
+        //attempted check to see to get image to show:
+        // if (product.image !== null) {
+        //   image = `<img class="img-fluid rounded-3" src="http://localhost:1337${product.image.url}" alt="Sneaker product image" />`;
+        // } else if (product.image_url !== null) {
+        //   image = `<img class="img-fluid rounded-3" src="${product.image_url}" alt="Sneaker product image" />`;
+        // } Hvis jeg fjernner bilde if checkn så vises resten i basket
+
         basketContainer.innerHTML += `<div class="col-lg-3 col-md-4 mp-3 p-4 ">
                   <h3>${product.title}</h3>
-                  <img class="img-fluid rounded-3" src="http://localhost:1337${product.img}" alt="Sneaker product image" />
+                 
                       <h5>Price:${product.price}$</h5>
                       <button data-id="${product.id}" class="removeproduct_btn">Remove from basket</button>
                   </div>

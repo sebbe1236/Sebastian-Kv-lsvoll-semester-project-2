@@ -21,12 +21,21 @@ function renderProducts(json) {
   try {
     productsContainer.innerHTML = "";
     json.forEach((products) => {
+      let image = "";
+
+      if (products.image !== null) {
+        image = `<img class="img-fluid rounded-3" src="http://localhost:1337${products.image.url}" alt="Sneaker product image" />`;
+      } else if (products.image_url !== null) {
+        image = `<img class="img-fluid rounded-3" src="${products.image_url}" alt="Sneaker product image" />`;
+      }
+
       productsContainer.innerHTML += `
       
         <div class="col-lg-3 col-md-4 p-5 text-center">
         <a a href="singelproduct.html?id=${products.id}">
         <h3>${products.title}</h3> 
-        <img class="img-fluid rounded-3" src="http://localhost:1337${products.image.url}" alt="Sneaker product image" />
+        ${image}
+        
         <h5>Price:${products.price}$</h5> </a>
         </div>
         

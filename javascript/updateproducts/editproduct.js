@@ -27,10 +27,12 @@ async function individualProduct() {
     const response = await fetch(ProductsUrl);
     const json = await response.json();
     console.log(json);
+
     productName.value = json.title;
     productPrice.value = json.price;
     productDes.value = json.description;
-    productImage.value = json.image.url;
+    //productImage.value = json.image.url;
+    productImage.value = json.image;
     inputId.value = json.id;
     console.log(inputId);
 
