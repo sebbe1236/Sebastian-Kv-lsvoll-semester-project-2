@@ -31,7 +31,7 @@ async function individualProduct() {
     productName.value = json.title;
     productPrice.value = json.price;
     productDes.value = json.description;
-    //productImage.value = json.image.url;
+    //productImage.value = json.image.url; for å få /upload til å vises istede for et tomt felt.
     productImage.value = json.image;
     inputId.value = json.id;
     console.log(inputId);
@@ -46,7 +46,6 @@ async function individualProduct() {
 //||productimageValue.length === 0
 individualProduct();
 
-//Kommet til 2:58
 form.addEventListener("submit", submitEditForm);
 function submitEditForm(event) {
   event.preventDefault();

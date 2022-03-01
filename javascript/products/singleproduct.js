@@ -59,7 +59,7 @@ function addproductBasket() {
   const id = this.dataset.id;
 
   const image = this.dataset.img;
-  console.log(image);
+
   const price = this.dataset.price;
 
   const title = this.dataset.title;
