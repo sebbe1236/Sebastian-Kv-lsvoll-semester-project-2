@@ -56,6 +56,7 @@ singleProduct();
 function addproductBasket() {
   this.classList.toggle("fa-shopping-cart");
   this.classList.toggle("fa-cart-plus");
+
   const id = this.dataset.id;
 
   const image = this.dataset.img;

@@ -11,25 +11,29 @@ console.log(basketContainer);
 basketContent();
 
 function basketContent() {
+  console.log("basketContent()");
   try {
     const storageProduct = retriveFromStorage();
-    console.log(storageProduct);
+    console.log("storageProduct: ", storageProduct);
     if (storageProduct.length === 0) {
       basketContainer.innerHTML = `<h2>Cart is empty</h2>`;
     } else {
+      //debugger;
       basketContainer.innerHTML = "";
       storageProduct.forEach((product) => {
-        // let image = "";
-        //attempted check to see to get image to show:
-        // if (product.image !== null) {
-        //   image = `<img class="img-fluid rounded-3" src="http://localhost:1337${product.image.url}" alt="Sneaker product image" />`;
-        // } else if (product.image_url !== null) {
-        //   image = `<img class="img-fluid rounded-3" src="${product.image_url}" alt="Sneaker product image" />`;
-        // } Hvis jeg fjernner bilde if checkn så vises resten i basket
+        let image = "";
+
+        if (product.image !== null && product.image !== undefined) {
+          //image = `<img class="img-fluid rounded-3" src="http://localhost:1337${product.image.url}" alt="Sneaker product image" />`;
+          console.log("product.image is not null: ", product.image);
+        } else if (product.image_url !== null && product.image_url !== undefined) {
+          //image = `<img class="img-fluid rounded-3" src="${product.image_url}" alt="Sneaker product image" />`;
+          console.log("product.image_url: ", product.image_url);
+        }
 
         basketContainer.innerHTML += `<div class="col-lg-3 col-md-4 mp-3 p-4 text-center">
                   <h3>${product.title}</h3>
-                 
+                  
                       <h5>Price:${product.price}$</h5>
                       <button data-id="${product.id}" class="removeproduct_btn">Remove from basket</button>
                   </div>
