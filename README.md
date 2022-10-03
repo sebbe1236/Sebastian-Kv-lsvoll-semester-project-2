@@ -24,4 +24,4 @@ Functionality:
 ### github cli: 
   1. gh repo clone sebbe1236/Sebastian-Kv-lsvoll-semester-project-2
 ### Running
- 1. Open with live server
+ 1. Open with live server in Visual studio code
