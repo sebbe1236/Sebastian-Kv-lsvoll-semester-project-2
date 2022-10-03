@@ -1,6 +1,6 @@
 ## Semester project 2
 
-Noroff semester project 2
+Noroff semester project 2 wooCommerce shoe store
 
 ## Description
 
