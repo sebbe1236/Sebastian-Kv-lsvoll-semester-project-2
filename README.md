@@ -21,8 +21,11 @@ Functionality:
 - Javascript
 
 ## Getting started 
-### github cli: 
+### Running: 
   1. option one: gh repo clone sebbe1236/Sebastian-Kv-lsvoll-semester-project-2
-  2. optionn 2: open with gihub desktop then open in VS code from github desktop
-### Running
- 1. Open with live server in Visual studio code
+  2. option 2: open with gihub desktop then open in VS code from github desktop
+  
+## Contact
+
+www.linkedin.com/in/sebastian-kvålsvoll-479839151
+
